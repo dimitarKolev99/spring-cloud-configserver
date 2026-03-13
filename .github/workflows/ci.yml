@@ -48,7 +48,8 @@ jobs:
       - name: Build image with Paketo
         run: |
           pack build $IMAGE_NAME:${{ github.sha }} \
-            --builder paketobuildpacks/builder-jammy-base:latest
+            --builder paketobuildpacks/builder-noble-java-tiny:latest \
+            --env BP_JVM_VERSION=25
 
       - name: Tag latest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
