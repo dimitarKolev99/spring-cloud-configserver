@@ -10,6 +10,8 @@ jobs:
   build-test-and-publish:
     runs-on: ubuntu-latest
 
+    environment: DOCKERHUB_USERNAME
+
     permissions:
       contents: read
 
