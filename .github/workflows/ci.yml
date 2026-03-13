@@ -16,7 +16,7 @@ jobs:
       contents: read
 
     env:
-      IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/configserver
+      IMAGE_NAME: ${{ vars.DOCKERHUB_USERNAME }}/configserver
 
     steps:
       - name: Check out source
